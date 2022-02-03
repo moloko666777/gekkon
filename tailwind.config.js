@@ -24,7 +24,11 @@ module.exports = {
             colors: {
                 default: '#fff',
                 'crusta': {
-                    '500': '#F77D33'
+                    '500': '#F77D33',
+                    'hover': '#ff8135',
+                    'active': '#eb7730'
+                }, 'seashell-peach': {
+                    '500': '#fef2eb'
                 }, 'alabaster': {
                     '500': '#FAFAFA'
                 }, 'curious-blue': {
@@ -47,6 +51,13 @@ module.exports = {
             fontFamily: {
                 body: ['Gotham Pro']
             },
+            zIndex: {
+                '1': '1',
+                '2': '2',
+            },
+            lineHeight: {
+                'h4': '2.875rem',
+            }
         },
         spacing: {
             px: '1px',
@@ -84,14 +95,27 @@ module.exports = {
             72: '18rem',
             80: '20rem',
             96: '24rem',
+
+            76: '4.75rem',
+            84: '5.25rem',
+            100: '6.25rem',
+            164: '10.25rem',
             204: '12.75rem',
             214: '13.375rem',
             220: '13.75rem',
+            282: '17.625rem',
+            372: '23.25rem',
             384: '24rem',
+            588: '36.75rem',
+            648: '40.5rem',
+            660: '41.25rem',
             680: '42.5rem',
             715: '44.6rem',
             821: '50.75rem',
         },
+        minWidth: {
+            '150': '9.375rem',
+        }
     },
     variants: {
         extend: {},

@@ -9,6 +9,7 @@ var mySwiper = new Swiper ('.swiper-container', {
     // If we need pagination
     pagination: {
         el: '.swiper-pagination',
+        type: "fraction",
     },
 
     // Navigation arrows
@@ -22,3 +23,5 @@ var mySwiper = new Swiper ('.swiper-container', {
         el: '.swiper-scrollbar',
     },
 })
+
+document.getElementById('year').innerHTML = new Date().getFullYear();

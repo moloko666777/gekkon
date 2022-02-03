@@ -7,3 +7,13 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+
+@layer components {
+  .orange-button {
+    @apply font-bold text-white text-sm bg-crusta-500 py-4 px-8 hover:bg-crusta-hover active:bg-crusta-active disabled:opacity-50;
+  }
+  .title-h3 {
+    @apply font-bold text-woodsmoke-500 text-4xl leading-8;
+  }
+}
