@@ -69,9 +69,6 @@ body {
   display: block;
 }
 
-.test666 {
-
-}
 
 @font-face {
   font-family: 'Gotham Pro';
@@ -116,4 +113,35 @@ body {
   url('./fonts/GothamPro-Bold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
+}
+
+.accordion-toggle {
+  //display: block;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+  height: 100%;
+}
+
+.accordion-content {
+  //display: none;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+
+.accordion-content.active {
+  //display: block;
+  opacity: 1;
+  transition: all 0.2s ease-out;
+  height: 100%;
+}
+
+.toggle-icon {
+  transition: all 0.2s ease-out;
+  fill: #F77D33;
+  &.active {
+    transform: rotate(45deg);
+    transition: all 0.2s ease-out;
+    fill: #878787;
+  }
 }
