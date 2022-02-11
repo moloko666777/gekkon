@@ -4,8 +4,16 @@
 
 .container {
   @apply max-w-max;
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.container-tablet {
+  @apply max-w-max;
+  @media only screen and (max-width: 1024px){
+    max-width: 704px;
+    margin: 0 auto;
+  }
 }
 
 

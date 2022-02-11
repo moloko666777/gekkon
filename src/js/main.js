@@ -14,8 +14,8 @@ var mySwiper = new Swiper ('.swiper-container', {
 
     // Navigation arrows
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.main-swiper-button-next',
+        prevEl: '.main-swiper-button-prev',
     },
 
     // And if we need scrollbar
@@ -23,6 +23,17 @@ var mySwiper = new Swiper ('.swiper-container', {
         el: '.swiper-scrollbar',
     },
 })
+
+new Swiper('.guarantees-slider',{
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    loop: true,
+    navigation: {
+        nextEl: '.slider-button-next',
+        prevEl: '.slider-button-prev',
+    },
+});
 
 document.addEventListener('click', function (event) {
 
@@ -39,7 +50,6 @@ document.addEventListener('click', function (event) {
     if (toggleIcon.classList.contains('active')) {
         toggleIcon.classList.remove('active')
     } else {
-        console.log(document.querySelector('.toggle-icon.active'))
         let activeIcon = document.querySelector('.toggle-icon.active')
 
         activeIcon ? activeIcon.classList.remove('active') : false
@@ -59,24 +69,24 @@ document.addEventListener('click', function (event) {
 
     content.classList.toggle('active');
 
-    // for (var i = 0; i < toggleIcon.length; i++) {
-    //     toggleIcon[i].classList.remove('active');
-    // }
-    // toggleIcon.classList.toggle("active");
 
 })
 
-// document.addEventListener('click', function (event){
-//
-//     event.preventDefault();
-//
-//
-//     let toggleIcon = document.querySelector(".toggle-icon");
-//
-//     for (var i = 0; i < toggleIcon.length; i++) {
-//         toggleIcon[i].classList.remove('active');
-//     }
-//     toggleIcon.classList.toggle("active");
-// })
+document.getElementById('readMoreButton').onclick = function () {
+    document.getElementById('readMore').classList.toggle('active');
+    document.getElementById('rotate-icon').classList.toggle('active')
+}
+
+let openMenu = document.querySelector('#openMenu');
+let activeMenu = document.querySelector('#activeMenu');
+let menu = document.querySelector('#menu');
+let closeMenu = document.querySelector('#closeMenu');
+
+openMenu.addEventListener('click', function (){
+    activeMenu.classList.add('active');
+    menu.classList.toggle('active');
+    closeMenu.classList.remove('active');
+})
+
 
 document.getElementById('year').innerHTML = new Date().getFullYear();
